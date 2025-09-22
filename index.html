@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Оценка банковских вкладов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Система оценки банковских вкладов</h1>
+
+  <!-- Блок для добавления банка -->
+  <section class="form-section">
+    <h2>Добавить банк</h2>
+    <input type="text" id="bankName" placeholder="Название банка">
+
+    <input type="number" id="interestRate" placeholder="Процентная ставка (1–10)" min="1" max="10">
+    <input type="number" id="reliability" placeholder="Надёжность банка (1–10)" min="1" max="10">
+    <input type="number" id="depositTerm" placeholder="Срок и досрочное снятие (1–10)" min="1" max="10">
+    <input type="number" id="flexibility" placeholder="Пополнение/частичное снятие (1–10)" min="1" max="10">
+    <input type="number" id="currency" placeholder="Валюта вклада (1–10)" min="1" max="10">
+
+    <button onclick="addBank()">Добавить банк</button>
+  </section>
+
+  <!-- Список банков -->
+  <section>
+    <h2>Банки</h2>
+    <ul id="banksList"></ul>
+  </section>
+
+  <!-- Оценки экспертов -->
+  <section>
+    <h2>Оценка экспертов</h2>
+    <div id="experts"></div>
+  </section>
+
+  <!-- Итоговое ранжирование -->
+  <section>
+    <h2>Ранжирование</h2>
+    <ul id="ranking"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
